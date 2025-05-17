@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warung Tenda Biru</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-blue-50">
+    <header class="bg-blue-700 text-white py-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-bold">Warung Tenda Biru</h1>
+            <nav>
+                <ul class="flex gap-4">
+                    <li><a href="#home" class="hover:text-yellow-300">Home</a></li>
+                    <li><a href="#menu" class="hover:text-yellow-300">Menu</a></li>
+                    <li><a href="#about" class="hover:text-yellow-300">Tentang</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-300">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="text-center py-12 bg-cover bg-center bg-no-repeat" style="background-image: url('https://source.unsplash.com/featured/?indonesian-food');">
+        <div class="bg-black bg-opacity-60 py-16 px-4">
+            <h2 class="text-4xl text-white font-bold mb-4">Selamat Datang di Warung Tenda Biru</h2>
+            <p class="text-lg text-gray-200 mb-6">Masakan rumahan khas Indonesia, selalu segar dan enak!</p>
+            <a href="#menu" class="bg-yellow-400 text-gray-900 py-2 px-4 rounded-lg shadow-md font-bold">Lihat Menu</a>
+        </div>
+    </section>
+
+    <section id="menu" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Menu Makanan</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-blue-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Nasi Ayam Goreng</h3>
+                    <p class="text-gray-700">Ayam goreng gurih dengan nasi putih dan sambal khas.</p>
+                    <span class="block text-blue-700 font-semibold my-2">Rp 20.000</span>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Warung%20Tenda%20Biru,%20saya%20mau%20pesan%20Nasi%20Ayam%20Goreng." class="bg-blue-700 text-white py-2 px-4 rounded-lg shadow-md">Pesan Sekarang</a>
+                </div>
+                <div class="bg-blue-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Rendang Sapi</h3>
+                    <p class="text-gray-700">Rendang sapi empuk dengan bumbu khas Minang.</p>
+                    <span class="block text-blue-700 font-semibold my-2">Rp 30.000</span>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Warung%20Tenda%20Biru,%20saya%20mau%20pesan%20Rendang%20Sapi." class="bg-blue-700 text-white py-2 px-4 rounded-lg shadow-md">Pesan Sekarang</a>
+                </div>
+                <div class="bg-blue-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-2">Sayur Lodeh</h3>
+                    <p class="text-gray-700">Sayur lodeh segar dengan kuah santan gurih.</p>
+                    <span class="block text-blue-700 font-semibold my-2">Rp 15.000</span>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Warung%20Tenda%20Biru,%20saya%20mau%20pesan%20Sayur%20Lodeh." class="bg-blue-700 text-white py-2 px-4 rounded-lg shadow-md">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-blue-800 text-gray-200 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>Warung Tenda Biru - Belakang Wisma GKBI, Jakarta</p>
+            <p>Buka sampai jam 14.00 atau sampai makanan habis</p>
+            <p>© 2025 Warung Tenda Biru. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
