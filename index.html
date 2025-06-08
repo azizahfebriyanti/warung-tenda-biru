@@ -1,43 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Menu - WarungTendaBiru</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Home - WarungTendaBiru</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <h2 class="page-title">Menu</h2>
-  <div class="menu-list" id="menu-list"></div>
-
-  <div class="bottom-nav">
-    <a href="index.html">🏠</a>
-    <a href="menu.html" class="active">🍽️</a>
-    <a href="info.html">ℹ️</a>
+  <div class="container">
+    <h2 class="home-title">🏠 WarungTendaBiru</h2>
+    <div class="card">
+      <h3>Welcome to <span class="brand">WarungTendaBiru</span></h3>
+      <p>Experience the finest street food with a modern twist. Our stall offers a delightful mix of flavors that will tantalize your taste buds.</p>
+    </div>
+    <a class="btn" href="menu.html">View Menu</a>
+    <a class="btn" href="menu.html">Dish Details</a>
+    <a class="btn" href="info.html">Info</a>
   </div>
-
-  <script type="module">
-    import { menuItems } from "./menu-data.js";
-    const container = document.getElementById("menu-list");
-
-    menuItems.forEach(item => {
-      const a = document.createElement("a");
-      a.href = item.link;
-      a.className = "menu-item";
-      a.innerHTML = `
-        <img src="${item.img}" alt="${item.title}" />
-        <div>
-          <strong>${item.title}</strong>
-          <p>${item.desc}</p>
-          <p><strong>Rp. ${item.price.toLocaleString()}</strong> -
-            <span class="${item.available? "available":"out-stock"}">
-              ${item.available? "Available":"Out of Stock"}
-            </span>
-          </p>
-        </div>
-      `;
-      container.appendChild(a);
-    });
-  </script>
 </body>
 </html>
