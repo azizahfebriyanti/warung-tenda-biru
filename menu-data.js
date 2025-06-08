@@ -2,9 +2,9 @@ export const menuItems = [
   {
     title: "Ayam Bakar Bumbu Rujak",
     desc: "Grilled chicken in spicy-sweet rujak sauce.",
-    price: 20000,
+    price: Rp15.000,
     available: true,
-    img: "img/ayambakarbumburujak.jpg",
+    img: "ayambakarbumburujak.jpg",
     link: "dish-ayam.html"
   },
   {
@@ -12,7 +12,7 @@ export const menuItems = [
     desc: "Spicy Manadonese-style chicken with herbs.",
     price: 18000,
     available: true,
-    img: "img/woku.jpg",
+    img: "woku.jpg",
     link: "dish-woku.html"
   },
   {
@@ -20,7 +20,7 @@ export const menuItems = [
     desc: "Fried fish in turmeric coconut sauce.",
     price: 17000,
     available: false,
-    img: "img/pesmol.jpg",
+    img: "pesmol.jpg",
     link: "dish-pesmol.html"
   }
 ];
