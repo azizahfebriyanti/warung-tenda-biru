@@ -2,42 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Menu - WarungTendaBiru</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h2 class="page-title">Menu</h2>
-  <div class="menu-list">
-    <a href="dish-ayam.html" class="menu-item">
-      <img src="ayambakarbumburujak.jpg" alt="Ayam Bakar Bumbu Rujak" />
-      <div>
-        <strong>Ayam Bakar Bumbu Rujak</strong>
-        <p>Grilled chicken in spicy-sweet rujak sauce.</p>
-        <p><strong>Rp. 20,000</strong> - <span class="available">Available</span></p>
-      </div>
-    </a>
-    <a href="dish-woku.html" class="menu-item">
-      <img src="woku.jpg" alt="Woku" />
-      <div>
-        <strong>Woku</strong>
-        <p>Spicy Manadonese-style chicken with herbs.</p>
-        <p><strong>Rp. 18,000</strong> - <span class="available">Available</span></p>
-      </div>
-    </a>
-    <a href="dish-pesmol.html" class="menu-item">
-      <img src="pesmol.jpg" alt="Pesmol" />
-      <div>
-        <strong>Pesmol</strong>
-        <p>Fried fish in turmeric coconut sauce.</p>
-        <p><strong>Rp. 17,000</strong> - <span class="out-stock">Out of Stock</span></p>
-      </div>
-    </a>
-  </div>
+  <div class="menu-list" id="menu-list"></div>
+
   <div class="bottom-nav">
     <a href="index.html">🏠</a>
     <a href="menu.html" class="active">🍽️</a>
     <a href="info.html">ℹ️</a>
   </div>
+
+  <script type="module">
+    import { menuItems } from "./menu-data.js";
+    const container = document.getElementById("menu-list");
+
+    menuItems.forEach(item => {
+      const a = document.createElement("a");
+      a.href = item.link;
+      a.className = "menu-item";
+      a.innerHTML = `
+        <img src="${item.img}" alt="${item.title}" />
+        <div>
+          <strong>${item.title}</strong>
+          <p>${item.desc}</p>
+          <p><strong>Rp. ${item.price.toLocaleString()}</strong> -
+            <span class="${item.available? "available":"out-stock"}">
+              ${item.available? "Available":"Out of Stock"}
+            </span>
+          </p>
+        </div>
+      `;
+      container.appendChild(a);
+    });
+  </script>
 </body>
 </html>
