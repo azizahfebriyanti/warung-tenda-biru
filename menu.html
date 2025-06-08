@@ -16,10 +16,37 @@
     <a href="info.html">ℹ️</a>
   </div>
 
-  <script type="module">
-    import { menuItems } from "./menu-data.js";
-    const container = document.getElementById("menu-list");
+  <!-- Inline your data instead of a separate module file -->
+  <script>
+    const menuItems = [
+      {
+        title: "Ayam Bakar Bumbu Rujak",
+        desc: "Grilled chicken in spicy-sweet rujak sauce.",
+        price: 15000,
+        available: true,
+        img: "ayambakarbumburujak.jpg",
+        link: "dish-ayam.html"
+      },
+      {
+        title: "Woku",
+        desc: "Spicy Manadonese-style chicken with herbs.",
+        price: 8000,
+        available: true,
+        img: "woku.jpg",
+        link: "dish-woku.html"
+      },
+      {
+        title: "Pesmol",
+        desc: "Fried fish in turmeric coconut sauce.",
+        price: 13000,
+        available: false,
+        img: "pesmol.jpg",
+        link: "dish-pesmol.html"
+      }
+    ];
 
+    // build the menu
+    const container = document.getElementById("menu-list");
     menuItems.forEach(item => {
       const a = document.createElement("a");
       a.href = item.link;
@@ -29,9 +56,10 @@
         <div>
           <strong>${item.title}</strong>
           <p>${item.desc}</p>
-          <p><strong>Rp. ${item.price.toLocaleString()}</strong> -
-            <span class="${item.available? "available":"out-stock"}">
-              ${item.available? "Available":"Out of Stock"}
+          <p>
+            <strong>Rp. ${item.price.toLocaleString("id-ID")}</strong> -
+            <span class="${item.available ? "available" : "out-stock"}">
+              ${item.available ? "Available" : "Out of Stock"}
             </span>
           </p>
         </div>
