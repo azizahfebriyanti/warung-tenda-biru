@@ -1,153 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Menu - WarungTendaBiru</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <h2 class="page-title">Menu</h2>
-  <div class="menu-list" id="menu-list"></div>
-
-  <div class="bottom-nav">
-    <a href="index.html">🏠</a>
-    <a href="menu.html" class="active">🍽️</a>
-    <a href="info.html">ℹ️</a>
-  </div>
-
 <script>
   const menuItems = [
-    {
-      title: "Ayam Bakar Bumbu Rujak",
-      desc: "Grilled chicken in spicy-sweet rujak sauce.",
-      price: 15000,
-      available: true,
-      img: "ayambakarbumburujak.jpg",
-      link: "dish-ayam.html"
-    },
-    {
-      title: "Ayam Garang Asem",
-      desc: "Steamed chicken in sour tamarind coconut broth.",
-      price: 12000,
-      available: true,
-      img: "garangasem.jpg",
-      link: "dish-garang-asem.html"
-    },
-    {
-      title: "Ayam Woku",
-      desc: "Spicy Manadonese-style chicken with herbs.",
-      price: 8000,
-      available: true,
-      img: "woku.jpg",
-      link: "dish-woku.html"
-    },
-    {
-      title: "Pepes Ikan Kembung",
-      desc: "Steamed mackerel in banana leaf with spices.",
-      price: 12000,
-      available: true,
-      img: "pepeskembung.jpg",
-      link: "dish-pepes-kembung.html"
-    },
-    {
-      title: "Pepes Ikan Tuna",
-      desc: "Steamed tuna in banana leaf with aromatic herbs.",
-      price: 10000,
-      available: true,
-      img: "pepestuna.jpg",
-      link: "dish-pepes-tuna.html"
-    },
-    {
-      title: "Pepes Ikan Mas",
-      desc: "Steamed goldfish with herbs and chili.",
-      price: 13000,
-      available: true,
-      img: "pepesikanmas.jpg",
-      link: "dish-pepes-ikanmas.html"
-    },
-    {
-      title: "Sarden Ikan Kembung",
-      desc: "Mackerel sardines in rich tomato sauce.",
-      price: 10000,
-      available: true,
-      img: "sardenkembung.jpg",
-      link: "dish-sarden-kembung.html"
-    },
-    {
-      title: "Sayur-Sayuran",
-      desc: "Assorted Indonesian vegetables.",
-      price: 5000,
-      available: true,
-      img: "sayuran.jpg",
-      link: "dish-sayuran.html"
-    },
-    {
-      title: "Sambal Kentang & Orek Tempe",
-      desc: "Spiced fried potato and stir-fried tempeh.",
-      price: 5000,
-      available: true,
-      img: "sambaltempe.jpg",
-      link: "dish-tempe-kentang.html"
-    },
-    {
-      title: "Ikan Balado Tongkol",
-      desc: "Skipjack tuna with spicy red chili sambal.",
-      price: 8000,
-      available: true,
-      img: "tongkolbalado.jpg",
-      link: "dish-tongkol-balado.html"
-    },
-    {
-      title: "Ikan Kembung Pedas",
-      desc: "Spicy seasoned mackerel.",
-      price: 12000,
-      available: true,
-      img: "kembungpedas.jpg",
-      link: "dish-kembung-pedas.html"
-    },
-    {
-      title: "Telur Dadar / Ceplok / Bulat Sambal",
-      desc: "Fried eggs with sambal: omelet, sunny-side, or whole.",
-      price: 5000,
-      available: true,
-      img: "telur.jpg",
-      link: "dish-telur.html"
-    },
-    {
-      title: "Tumis Sayur",
-      desc: "Stir-fried vegetables with garlic and chili.",
-      price: 5000,
-      available: true,
-      img: "tumis.jpg",
-      link: "dish-tumisan.html"
-    },
-    {
-      title: "Ikan Nila",
-      desc: "Fried or grilled tilapia fish.",
-      price: 13000,
-      available: true,
-      img: "nila.jpg",
-      link: "dish-nila.html"
-    },
-    {
-      title: "Ikan Mas",
-      desc: "Goldfish cooked with traditional spices.",
-      price: 13000,
-      available: true,
-      img: "ikanmas.jpg",
-      link: "dish-ikanmas.html"
-    },
-    {
-      title: "Pesmol Ikan",
-      desc: "Fried fish in turmeric coconut sauce.",
-      price: 13000,
-      available: true,
-      img: "pesmol.jpg",
-      link: "dish-pesmol.html"
-    }
+    { title: "Ayam Bakar Bumbu Rujak", desc: "Grilled chicken with spicy-sweet rujak sauce.", price: 15000, available: true, img: "ayambakar.jpg", link: "dish-ayam-bakar.html" },
+    { title: "Ayam Garang Asem", desc: "Steamed chicken in tangy tamarind broth.", price: 12000, available: true, img: "garangasem.jpg", link: "dish-garang-asem.html" },
+    { title: "Ayam Woku", desc: "Spicy Manadonese-style chicken.", price: 8000, available: true, img: "woku.jpg", link: "dish-woku.html" },
+    { title: "Pepes Ikan Kembung", desc: "Steamed mackerel in banana leaf.", price: 12000, available: true, img: "pepes-kembung.jpg", link: "dish-pepes-kembung.html" },
+    { title: "Pepes Ikan Tuna", desc: "Steamed tuna in banana leaf.", price: 10000, available: true, img: "pepes-tuna.jpg", link: "dish-pepes-tuna.html" },
+    { title: "Pepes Ikan Mas", desc: "Steamed carp fish in banana leaf.", price: 13000, available: true, img: "pepes-mas.jpg", link: "dish-pepes-mas.html" },
+    { title: "Sarden Ikan Kembung", desc: "Mackerel sardines in spicy sauce.", price: 10000, available: true, img: "sarden-kembung.jpg", link: "dish-sarden-kembung.html" },
+    { title: "Sayur", desc: "Daily vegetable side dish.", price: 5000, available: true, img: "sayur.jpg", link: "dish-sayur.html" },
+    { title: "Sambal Kentang", desc: "Spicy potato side dish.", price: 5000, available: true, img: "sambal-kentang.jpg", link: "dish-sambal-kentang.html" },
+    { title: "Orek Tempe", desc: "Stir-fried sweet tempeh.", price: 5000, available: true, img: "orek-tempe.jpg", link: "dish-orek-tempe.html" },
+    { title: "Ikan Balado Tongkol", desc: "Tuna in red chili sauce.", price: 8000, available: true, img: "balado-tongkol.jpg", link: "dish-balado-tongkol.html" },
+    { title: "Ikan Kembung Pedas", desc: "Spicy mackerel dish.", price: 12000, available: true, img: "kembung-pedas.jpg", link: "dish-kembung-pedas.html" },
+    { title: "Telur Dadar", desc: "Fried egg omelet.", price: 5000, available: true, img: "telur-dadar.jpg", link: "dish-telur-dadar.html" },
+    { title: "Telur Ceplok Sambal", desc: "Fried egg with sambal.", price: 5000, available: true, img: "telur-ceplok.jpg", link: "dish-telur-ceplok.html" },
+    { title: "Telur Bulat", desc: "Egg simmered in sweet soy sauce.", price: 5000, available: true, img: "telur-bulat.jpg", link: "dish-telur-bulat.html" },
+    { title: "Tumisan", desc: "Mixed vegetable stir-fry.", price: 5000, available: true, img: "tumisan.jpg", link: "dish-tumisan.html" },
+    { title: "Ikan Nila", desc: "Fried tilapia.", price: 13000, available: true, img: "nila.jpg", link: "dish-nila.html" },
+    { title: "Ikan Mas", desc: "Fried carp fish.", price: 13000, available: true, img: "ikan-mas.jpg", link: "dish-ikan-mas.html" },
+    { title: "Pesmol", desc: "Fish in turmeric coconut sauce.", price: 13000, available: true, img: "pesmol.jpg", link: "dish-pesmol.html" }
   ];
 
+  // build the menu
   const container = document.getElementById("menu-list");
   menuItems.forEach(item => {
     const a = document.createElement("a");
