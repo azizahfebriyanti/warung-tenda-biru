@@ -1,71 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Menu - WarungTendaBiru</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <h2 class="page-title">Menu</h2>
-  <div class="menu-list" id="menu-list"></div>
+<script>
+  const menuItems = [
+    {
+      title: "Ayam Bakar Bumbu Rujak",
+      desc: "Grilled chicken in spicy-sweet rujak sauce.",
+      price: 15000,
+      available: true,
+      img: "ayambakarbumburujak.jpg",
+      link: "dish-ayam-bakar.html"
+    },
+    {
+      title: "Ayam Garang Asem",
+      desc: "Steamed chicken in sour tamarind coconut broth.",
+      price: 12000,
+      available: true,
+      img: "garangasem.jpg",
+      link: "dish-garang-asem.html"
+    },
+    {
+      title: "Ayam Woku",
+      desc: "Spicy Manadonese-style chicken with herbs.",
+      price: 8000,
+      available: true,
+      img: "woku.jpg",
+      link: "dish-woku.html"
+    },
+    {
+      title: "Pepes Ikan Kembung",
+      desc: "Steamed mackerel in banana leaf with spices.",
+      price: 12000,
+      available: true,
+      img: "pepeskembung.jpg",
+      link: "dish-pepes-kembung.html"
+    },
+    {
+      title: "Pepes Ikan Tuna",
+      desc: "Steamed tuna in banana leaf with aromatic herbs.",
+      price: 10000,
+      available: true,
+      img: "pepestuna.jpg",
+      link: "dish-pepes-tuna.html"
+    },
+    {
+      title: "Pepes Ikan Mas",
+      desc: "Steamed goldfish with herbs and chili.",
+      price: 13000,
+      available: true,
+      img: "pepesikanmas.jpg",
+      link: "dish-pepes-ikanmas.html"
+    },
+    {
+      title: "Sarden Ikan Kembung",
+      desc: "Mackerel sardines in rich tomato sauce.",
+      price: 10000,
+      available: true,
+      img: "sardenkembung.jpg",
+      link: "dish-sarden-kembung.html"
+    },
+    {
+      title: "Sayur-Sayuran",
+      desc: "Assorted Indonesian vegetables.",
+      price: 5000,
+      available: true,
+      img: "sayuran.jpg",
+      link: "dish-sayuran.html"
+    },
+    {
+      title: "Sambal Kentang & Orek Tempe",
+      desc: "Spiced fried potato and stir-fried tempeh.",
+      price: 5000,
+      available: true,
+      img: "sambaltempe.jpg",
+      link: "dish-tempe-kentang.html"
+    },
+    {
+      title: "Ikan Balado Tongkol",
+      desc: "Skipjack tuna with spicy red chili sambal.",
+      price: 8000,
+      available: true,
+      img: "tongkolbalado.jpg",
+      link: "dish-tongkol-balado.html"
+    },
+    {
+      title: "Ikan Kembung Pedas",
+      desc: "Spicy seasoned mackerel.",
+      price: 12000,
+      available: true,
+      img: "kembungpedas.jpg",
+      link: "dish-kembung-pedas.html"
+    },
+    {
+      title: "Telur Dadar / Ceplok / Bulat Sambal",
+      desc: "Fried eggs with sambal: omelet, sunny-side, or whole.",
+      price: 5000,
+      available: true,
+      img: "telur.jpg",
+      link: "dish-telur.html"
+    },
+    {
+      title: "Tumis Sayur",
+      desc: "Stir-fried vegetables with garlic and chili.",
+      price: 5000,
+      available: true,
+      img: "tumis.jpg",
+      link: "dish-tumisan.html"
+    },
+    {
+      title: "Ikan Nila",
+      desc: "Fried or grilled tilapia fish.",
+      price: 13000,
+      available: true,
+      img: "nila.jpg",
+      link: "dish-nila.html"
+    },
+    {
+      title: "Ikan Mas",
+      desc: "Goldfish cooked with traditional spices.",
+      price: 13000,
+      available: true,
+      img: "ikanmas.jpg",
+      link: "dish-ikanmas.html"
+    },
+    {
+      title: "Pesmol Ikan",
+      desc: "Fried fish in turmeric coconut sauce.",
+      price: 13000,
+      available: true,
+      img: "pesmol.jpg",
+      link: "dish-pesmol.html"
+    }
+  ];
 
-  <div class="bottom-nav">
-    <a href="index.html">🏠</a>
-    <a href="menu.html" class="active">🍽️</a>
-    <a href="info.html">ℹ️</a>
-  </div>
-
-  <!-- Inline your data instead of a separate module file -->
-  <script>
-    const menuItems = [
-      {
-        title: "Ayam Bakar Bumbu Rujak",
-        desc: "Grilled chicken in spicy-sweet rujak sauce.",
-        price: 15000,
-        available: true,
-        img: "ayambakarbumburujak.jpg",
-        link: "dish-ayam.html"
-      },
-      {
-        title: "Woku",
-        desc: "Spicy Manadonese-style chicken with herbs.",
-        price: 8000,
-        available: true,
-        img: "woku.jpg",
-        link: "dish-woku.html"
-      },
-      {
-        title: "Pesmol",
-        desc: "Fried fish in turmeric coconut sauce.",
-        price: 13000,
-        available: true,
-        img: "pesmol.jpg",
-        link: "dish-pesmol.html"
-      }
-    ];
-
-    // build the menu
-    const container = document.getElementById("menu-list");
-    menuItems.forEach(item => {
-      const a = document.createElement("a");
-      a.href = item.link;
-      a.className = "menu-item";
-      a.innerHTML = `
-        <img src="${item.img}" alt="${item.title}" />
-        <div>
-          <strong>${item.title}</strong>
-          <p>${item.desc}</p>
-          <p>
-            <strong>Rp. ${item.price.toLocaleString("id-ID")}</strong> -
-            <span class="${item.available ? "available" : "out-stock"}">
-              ${item.available ? "Available" : "Out of Stock"}
-            </span>
-          </p>
-        </div>
-      `;
-      container.appendChild(a);
-    });
-  </script>
-</body>
-</html>
+  const container = document.getElementById("menu-list");
+  menuItems.forEach(item => {
+    const a = document.createElement("a");
+    a.href = item.link;
+    a.className = "menu-item";
+    a.innerHTML = `
+      <img src="${item.img}" alt="${item.title}" />
+      <div>
+        <strong>${item.title}</strong>
+        <p>${item.desc}</p>
+        <p>
+          <strong>Rp. ${item.price.toLocaleString("id-ID")}</strong> -
+          <span class="${item.available ? "available" : "out-stock"}">
+            ${item.available ? "Available" : "Out of Stock"}
+          </span>
+        </p>
+      </div>
+    `;
+    container.appendChild(a);
+  });
+</script>
